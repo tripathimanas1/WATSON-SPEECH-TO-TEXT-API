@@ -11,7 +11,7 @@ s2t
 filename='PolynomialRegressionandPipelines.mp3'
 with open(filename, mode="rb")  as wav:
     response = s2t.recognize(audio=wav, content_type='audio/mp3')
-print(response.result)
+#print(response.result)
 from pandas import json_normalize
 json_normalize(response.result['results'],"alternatives")
 recognized_text=response.result['results'][0]["alternatives"][0]["transcript"]
